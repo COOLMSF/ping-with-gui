@@ -164,7 +164,11 @@ class MainWindow(QMainWindow):
             
     def btn_start_ping_clicked(self):
         # Ping(timeout=1000, packet_size=55, own_id=None, udp=False, bind=None, quiet=True)
-        p = Ping()
+        timeout = int(self.ui.le_timeout_timeout.text().strip())
+        pkt_size = int(self.ui.le_pkt_size.text().strip())
+        pkt_cnt = int(self.ui.le_pkt_cnt.text().strip())
+        
+        p = Ping(timeout=timeout, packet_size=pkt_size, own_id=None, udp=False, bind=None, quiet=True)
         url = self.ui.le_url.text().strip()
         
         self.ui.pte_ping_output.appendPlainText("starting pinging %s" % url)
@@ -173,7 +177,7 @@ class MainWindow(QMainWindow):
         # buffer = StringIO
         # sys.stdout = buffer
         with open('tmp.dat', 'w') as sys.stdout:
-            res = p.ping(url)
+            res = p.ping(url, times=pkt_cnt)
             res.print_messages()
         
         with open('tmp.dat', 'r') as f:

@@ -1980,7 +1980,7 @@ background-repeat: no-repeat;</string>
                                    <string notr="true"/>
                                   </property>
                                   <property name="text">
-                                   <string>FILE BOX</string>
+                                   <string>URL或主机IP</string>
                                   </property>
                                  </widget>
                                 </item>
@@ -2075,6 +2075,134 @@ background-repeat: no-repeat;</string>
                             </layout>
                            </widget>
                           </item>
+                          <item>
+                           <widget class="QFrame" name="frame">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <widget class="QFrame" name="frame_2">
+                             <property name="geometry">
+                              <rect>
+                               <x>10</x>
+                               <y>20</y>
+                               <width>1121</width>
+                               <height>51</height>
+                              </rect>
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <widget class="QWidget" name="">
+                              <property name="geometry">
+                               <rect>
+                                <x>10</x>
+                                <y>0</y>
+                                <width>1121</width>
+                                <height>51</height>
+                               </rect>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_10">
+                               <item>
+                                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                                 <item>
+                                  <widget class="QLabel" name="label">
+                                   <property name="text">
+                                    <string>发送数量</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLineEdit" name="le_pkt_cnt">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>1</string>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string>Type here</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </item>
+                               <item>
+                                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                                 <item>
+                                  <widget class="QLabel" name="label_2">
+                                   <property name="text">
+                                    <string>数据大小</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLineEdit" name="le_pkt_size">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>55</string>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string>Type here</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </item>
+                               <item>
+                                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                                 <item>
+                                  <widget class="QLabel" name="label_3">
+                                   <property name="text">
+                                    <string>超时时间</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="QLineEdit" name="le_timeout_timeout">
+                                   <property name="minimumSize">
+                                    <size>
+                                     <width>0</width>
+                                     <height>30</height>
+                                    </size>
+                                   </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">background-color: rgb(33, 37, 43);</string>
+                                   </property>
+                                   <property name="text">
+                                    <string>1000</string>
+                                   </property>
+                                   <property name="placeholderText">
+                                    <string>Type here</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                </layout>
+                               </item>
+                              </layout>
+                             </widget>
+                            </widget>
+                           </widget>
+                          </item>
                          </layout>
                         </widget>
                        </item>
@@ -2106,43 +2234,6 @@ background-repeat: no-repeat;</string>
                               <property name="text">
                                <string>CheckBox</string>
                               </property>
-                             </widget>
-                            </item>
-                            <item row="1" column="0" colspan="2">
-                             <widget class="QComboBox" name="cb_ping_method">
-                              <property name="font">
-                               <font>
-                                <family>Segoe UI</family>
-                                <pointsize>10</pointsize>
-                                <italic>false</italic>
-                                <bold>false</bold>
-                               </font>
-                              </property>
-                              <property name="autoFillBackground">
-                               <bool>false</bool>
-                              </property>
-                              <property name="styleSheet">
-                               <string notr="true">background-color: rgb(33, 37, 43);</string>
-                              </property>
-                              <property name="iconSize">
-                               <size>
-                                <width>16</width>
-                                <height>16</height>
-                               </size>
-                              </property>
-                              <property name="frame">
-                               <bool>true</bool>
-                              </property>
-                              <item>
-                               <property name="text">
-                                <string>系统自带ping</string>
-                               </property>
-                              </item>
-                              <item>
-                               <property name="text">
-                                <string>原始套接字ping</string>
-                               </property>
-                              </item>
                              </widget>
                             </item>
                             <item row="0" column="2" rowspan="3">
@@ -2222,6 +2313,43 @@ background-repeat: no-repeat;</string>
                                 </item>
                                </layout>
                               </widget>
+                             </widget>
+                            </item>
+                            <item row="1" column="0" colspan="2">
+                             <widget class="QComboBox" name="cb_ping_method">
+                              <property name="font">
+                               <font>
+                                <family>Segoe UI</family>
+                                <pointsize>10</pointsize>
+                                <italic>false</italic>
+                                <bold>false</bold>
+                               </font>
+                              </property>
+                              <property name="autoFillBackground">
+                               <bool>false</bool>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">background-color: rgb(33, 37, 43);</string>
+                              </property>
+                              <property name="iconSize">
+                               <size>
+                                <width>16</width>
+                                <height>16</height>
+                               </size>
+                              </property>
+                              <property name="frame">
+                               <bool>true</bool>
+                              </property>
+                              <item>
+                               <property name="text">
+                                <string>系统自带ping</string>
+                               </property>
+                              </item>
+                              <item>
+                               <property name="text">
+                                <string>原始套接字ping</string>
+                               </property>
+                              </item>
                              </widget>
                             </item>
                            </layout>

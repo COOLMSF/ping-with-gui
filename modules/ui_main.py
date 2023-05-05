@@ -1134,6 +1134,75 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_16.addWidget(self.frame_div_content_1)
 
+        self.frame = QFrame(self.row_1)
+        self.frame.setObjectName(u"frame")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.frame_2 = QFrame(self.frame)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setGeometry(QRect(10, 20, 1121, 51))
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.widget = QWidget(self.frame_2)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(10, 0, 1121, 51))
+        self.horizontalLayout_10 = QHBoxLayout(self.widget)
+        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
+        self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_6 = QHBoxLayout()
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.label = QLabel(self.widget)
+        self.label.setObjectName(u"label")
+
+        self.horizontalLayout_6.addWidget(self.label)
+
+        self.le_pkt_cnt = QLineEdit(self.widget)
+        self.le_pkt_cnt.setObjectName(u"le_pkt_cnt")
+        self.le_pkt_cnt.setMinimumSize(QSize(0, 30))
+        self.le_pkt_cnt.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.horizontalLayout_6.addWidget(self.le_pkt_cnt)
+
+
+        self.horizontalLayout_10.addLayout(self.horizontalLayout_6)
+
+        self.horizontalLayout_7 = QHBoxLayout()
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.label_2 = QLabel(self.widget)
+        self.label_2.setObjectName(u"label_2")
+
+        self.horizontalLayout_7.addWidget(self.label_2)
+
+        self.le_pkt_size = QLineEdit(self.widget)
+        self.le_pkt_size.setObjectName(u"le_pkt_size")
+        self.le_pkt_size.setMinimumSize(QSize(0, 30))
+        self.le_pkt_size.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.horizontalLayout_7.addWidget(self.le_pkt_size)
+
+
+        self.horizontalLayout_10.addLayout(self.horizontalLayout_7)
+
+        self.horizontalLayout_8 = QHBoxLayout()
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.label_3 = QLabel(self.widget)
+        self.label_3.setObjectName(u"label_3")
+
+        self.horizontalLayout_8.addWidget(self.label_3)
+
+        self.le_timeout_timeout = QLineEdit(self.widget)
+        self.le_timeout_timeout.setObjectName(u"le_timeout_timeout")
+        self.le_timeout_timeout.setMinimumSize(QSize(0, 30))
+        self.le_timeout_timeout.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+
+        self.horizontalLayout_8.addWidget(self.le_timeout_timeout)
+
+
+        self.horizontalLayout_10.addLayout(self.horizontalLayout_8)
+
+
+        self.verticalLayout_16.addWidget(self.frame)
+
 
         self.verticalLayout.addWidget(self.row_1)
 
@@ -1152,18 +1221,6 @@ class Ui_MainWindow(object):
         self.checkBox.setStyleSheet(u"")
 
         self.gridLayout_2.addWidget(self.checkBox, 0, 0, 1, 1)
-
-        self.cb_ping_method = QComboBox(self.row_2)
-        self.cb_ping_method.addItem("")
-        self.cb_ping_method.addItem("")
-        self.cb_ping_method.setObjectName(u"cb_ping_method")
-        self.cb_ping_method.setFont(font)
-        self.cb_ping_method.setAutoFillBackground(False)
-        self.cb_ping_method.setStyleSheet(u"background-color: rgb(33, 37, 43);")
-        self.cb_ping_method.setIconSize(QSize(16, 16))
-        self.cb_ping_method.setFrame(True)
-
-        self.gridLayout_2.addWidget(self.cb_ping_method, 1, 0, 1, 2)
 
         self.verticalScrollBar = QScrollBar(self.row_2)
         self.verticalScrollBar.setObjectName(u"verticalScrollBar")
@@ -1213,6 +1270,18 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
         self.gridLayout_2.addWidget(self.scrollArea, 0, 3, 3, 1)
+
+        self.cb_ping_method = QComboBox(self.row_2)
+        self.cb_ping_method.addItem("")
+        self.cb_ping_method.addItem("")
+        self.cb_ping_method.setObjectName(u"cb_ping_method")
+        self.cb_ping_method.setFont(font)
+        self.cb_ping_method.setAutoFillBackground(False)
+        self.cb_ping_method.setStyleSheet(u"background-color: rgb(33, 37, 43);")
+        self.cb_ping_method.setIconSize(QSize(16, 16))
+        self.cb_ping_method.setFrame(True)
+
+        self.gridLayout_2.addWidget(self.cb_ping_method, 1, 0, 1, 2)
 
 
         self.verticalLayout_19.addLayout(self.gridLayout_2)
@@ -1426,16 +1495,25 @@ class Ui_MainWindow(object):
         self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
-        self.labelBoxBlenderInstalation.setText(QCoreApplication.translate("MainWindow", u"FILE BOX", None))
+        self.labelBoxBlenderInstalation.setText(QCoreApplication.translate("MainWindow", u"URL\u6216\u4e3b\u673aIP", None))
         self.le_url.setText(QCoreApplication.translate("MainWindow", u"URL", None))
         self.le_url.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
         self.btn_start_ping.setText(QCoreApplication.translate("MainWindow", u"Ping", None))
         self.labelVersion_3.setText(QCoreApplication.translate("MainWindow", u"Label description", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"\u53d1\u9001\u6570\u91cf", None))
+        self.le_pkt_cnt.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.le_pkt_cnt.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u6570\u636e\u5927\u5c0f", None))
+        self.le_pkt_size.setText(QCoreApplication.translate("MainWindow", u"55", None))
+        self.le_pkt_size.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u8d85\u65f6\u65f6\u95f4", None))
+        self.le_timeout_timeout.setText(QCoreApplication.translate("MainWindow", u"1000", None))
+        self.le_timeout_timeout.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Type here", None))
         self.checkBox.setText(QCoreApplication.translate("MainWindow", u"CheckBox", None))
+        self.radioButton.setText(QCoreApplication.translate("MainWindow", u"RadioButton", None))
         self.cb_ping_method.setItemText(0, QCoreApplication.translate("MainWindow", u"\u7cfb\u7edf\u81ea\u5e26ping", None))
         self.cb_ping_method.setItemText(1, QCoreApplication.translate("MainWindow", u"\u539f\u59cb\u5957\u63a5\u5b57ping", None))
 
-        self.radioButton.setText(QCoreApplication.translate("MainWindow", u"RadioButton", None))
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
