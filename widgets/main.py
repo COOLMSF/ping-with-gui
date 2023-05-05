@@ -17,8 +17,6 @@
 import sys
 import os
 import platform
-from pings import Ping
-from io import StringIO
 
 # IMPORT / GUI AND MODULES AND WIDGETS
 # ///////////////////////////////////////////////////////////////
@@ -63,7 +61,7 @@ class MainWindow(QMainWindow):
 
         # QTableWidget PARAMETERS
         # ///////////////////////////////////////////////////////////////
-        # widgets.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        widgets.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
         # BUTTONS CLICK
         # ///////////////////////////////////////////////////////////////
@@ -73,8 +71,6 @@ class MainWindow(QMainWindow):
         widgets.btn_widgets.clicked.connect(self.buttonClick)
         widgets.btn_new.clicked.connect(self.buttonClick)
         widgets.btn_save.clicked.connect(self.buttonClick)
-        
-        self.ui.btn_start_ping.clicked.connect(self.btn_start_ping_clicked)
 
         # EXTRA LEFT BOX
         def openCloseLeftBox():
@@ -160,28 +156,6 @@ class MainWindow(QMainWindow):
             print('Mouse click: LEFT CLICK')
         if event.buttons() == Qt.RightButton:
             print('Mouse click: RIGHT CLICK')
-            
-            
-    def btn_start_ping_clicked(self):
-        # Ping(timeout=1000, packet_size=55, own_id=None, udp=False, bind=None, quiet=True)
-        p = Ping()
-        url = self.ui.le_url.text().strip()
-        
-        self.ui.pte_ping_output.appendPlainText("starting pinging %s" % url)
-        
-        # redirect output to variable
-        # buffer = StringIO
-        # sys.stdout = buffer
-        with open('tmp.dat', 'w') as sys.stdout:
-            res = p.ping(url)
-            res.print_messages()
-        
-        with open('tmp.dat', 'r') as f:
-        # print_output = buffer.getvalue()
-            data = f.read()
-            self.ui.pte_ping_output.appendPlainText(data)
-        # recovery output
-        # sys.stdout = sys.__stdout__
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

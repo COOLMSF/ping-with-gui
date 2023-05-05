@@ -1,0 +1,5 @@
+PING www.baidu.com (119.63.197.139): 55 data bytes
+47 bytes from 119.63.197.139: icmp_seq=0 ttl=49 time=257.127 ms
+--- www.baidu.com ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max = 257.127/257.127/257.127 ms
